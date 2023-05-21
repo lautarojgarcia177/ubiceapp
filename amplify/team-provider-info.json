@@ -10,6 +10,17 @@
       "StackName": "amplify-ubiceapp-main-130108",
       "StackId": "arn:aws:cloudformation:sa-east-1:450162237051:stack/amplify-ubiceapp-main-130108/b43fdf90-f7f0-11ed-9c6c-0a7b899f7f5e",
       "AmplifyAppId": "djsgbw0jz4umw"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "djsgbw0jz4umw",
+          "type": "cicd"
+        }
+      },
+      "auth": {
+        "ubiceappee1d8a48": {}
+      }
     }
   }
 }
