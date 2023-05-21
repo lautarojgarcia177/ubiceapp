@@ -1,0 +1,29 @@
+.active-link {
+    color: #00ff01 !important;
+    font-weight: bold !important;
+}
+
+.icon-button {
+    border: none;
+    background: none;
+}
+
+.icon-button:hover {
+    opacity: 0.5;
+}
+
+.ubice-btn-secondary {
+    background-color: #071743;
+    color: white;
+}
+
+.ubice-btn-secondary:hover {
+    background-color: #071743bb;
+    color: white;
+}
+
+.ubice-btn-secondary:disabled {
+    background-color: #071743;
+    color: white;
+    opacity: 0.5;
+}
