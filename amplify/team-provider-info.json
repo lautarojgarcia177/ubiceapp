@@ -1,0 +1,15 @@
+{
+  "main": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ubiceapp-main-130108-authRole",
+      "UnauthRoleArn": "arn:aws:iam::450162237051:role/amplify-ubiceapp-main-130108-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::450162237051:role/amplify-ubiceapp-main-130108-authRole",
+      "Region": "sa-east-1",
+      "DeploymentBucketName": "amplify-ubiceapp-main-130108-deployment",
+      "UnauthRoleName": "amplify-ubiceapp-main-130108-unauthRole",
+      "StackName": "amplify-ubiceapp-main-130108",
+      "StackId": "arn:aws:cloudformation:sa-east-1:450162237051:stack/amplify-ubiceapp-main-130108/b43fdf90-f7f0-11ed-9c6c-0a7b899f7f5e",
+      "AmplifyAppId": "djsgbw0jz4umw"
+    }
+  }
+}
