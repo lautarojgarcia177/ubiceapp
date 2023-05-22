@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@aws-amplify/ui-react/styles.css";
 import "@/styles/custom-theme.css"
 import "@/styles/styles.css"
+import 'react-toastify/dist/ReactToastify.css';
 
 import { Amplify } from "aws-amplify";
 import awsExports from "../aws-exports.js";
