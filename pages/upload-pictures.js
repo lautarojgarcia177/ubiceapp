@@ -72,8 +72,8 @@ const UploadPictures = () => {
       console.log(uploadPackageId);
       toast.success(<SuccessNotification uploadPackageId={uploadPackageId} />);
     } else {
-      const detailedError = await response.json();
-      console.error("Upload failed:", detailedError);
+      const errorBody = await response.text();
+      console.error("Upload failed:", errorBody);
       toast.error("Hubo un error subiendo las fotos");
     }
   };
