@@ -31,7 +31,7 @@ function generateFileName(
 
 const upload = multer({
   limits: {
-    fileSize: 1024 * 1024 * 5, // limit file size to 5 MB
+    fileSize: 1024 * 1024 * 10, // limit file size to 5 MB
   },
   storage: multerS3({
     s3: s3Client,
