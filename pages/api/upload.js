@@ -61,16 +61,20 @@ export default async function handler(req, res) {
   // Generate code for download
   if (req.method === "POST") {
     req.uploadPackageId = uuidv4();
-    await new Promise((resolve, reject) => {
-      upload(req, res, (err) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve();
-        }
+    try {
+      await new Promise((resolve, reject) => {
+        upload(req, res, (err) => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve();
+          }
+        });
       });
-    });
-    res.status(200).json({ uploadPackageId: req.uploadPackageId });
+      res.status(200).json({ uploadPackageId: req.uploadPackageId });
+    } catch (err) {
+      res.status(500).json({ error: err });
+    }
   } else {
     res.status(405).json({ message: "Method not allowed" });
   }
