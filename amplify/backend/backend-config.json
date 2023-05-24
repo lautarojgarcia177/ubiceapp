@@ -1,6 +1,6 @@
 {
   "auth": {
-    "ubiceappee1d8a48": {
+    "ubiceapp99b3b04d": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -29,7 +29,7 @@
   },
   "hosting": {
     "amplifyhosting": {
-      "lastPushTimeStamp": "2023-05-21T16:07:25.608Z",
+      "lastPushTimeStamp": "2023-05-24T17:58:53.040Z",
       "service": "amplifyhosting",
       "type": "cicd"
     }
