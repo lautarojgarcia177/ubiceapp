@@ -15,7 +15,7 @@ export default function DownloadPictures() {
     const uploadPackageId = id;
     setId("");
     try {
-      const response = await fetch("/api/download", {
+      const response = await fetch("http://13.52.74.91:8080/download", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

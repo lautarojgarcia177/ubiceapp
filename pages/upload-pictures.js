@@ -62,18 +62,23 @@ const UploadPictures = () => {
     setEventNumber("");
 
     setSending(true);
-    const response = await fetch("/api/upload", {
-      method: "POST",
-      body: formData,
-    });
-    setSending(false);
-    if (response.ok) {
-      const { uploadPackageId } = await response.json();
-      console.log(uploadPackageId);
-      toast.success(<SuccessNotification uploadPackageId={uploadPackageId} />);
-    } else {
-      const errorMessage = await response.json();
-      console.error("Upload failed:", errorMessage);
+    try {
+      const response = await fetch("http://13.52.74.91:8080/upload", {
+        method: "POST",
+        body: formData,
+      });
+      setSending(false);
+      if (response.ok) {
+        const { uploadPackageId } = await response.json();
+        console.log(uploadPackageId);
+        toast.success(<SuccessNotification uploadPackageId={uploadPackageId} />);
+      } else {
+        const errorMessage = await response.json();
+        console.error("Upload failed:", errorMessage);
+        toast.error("Hubo un error subiendo las fotos");
+      }
+    } catch (err) {
+      console.error("Upload failed:", err);
       toast.error("Hubo un error subiendo las fotos");
     }
   };
