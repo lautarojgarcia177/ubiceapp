@@ -63,7 +63,7 @@ const UploadPictures = () => {
 
     setSending(true);
     try {
-      const response = await fetch("http://13.52.74.91:8080/upload", {
+      const response = await fetch("https://exiftool.ubice.com.ar/upload", {
         method: "POST",
         body: formData,
       });
