@@ -71,7 +71,9 @@ const UploadPictures = () => {
       if (response.ok) {
         const { uploadPackageId } = await response.json();
         console.log(uploadPackageId);
-        toast.success(<SuccessNotification uploadPackageId={uploadPackageId} />);
+        toast.success(
+          <SuccessNotification uploadPackageId={uploadPackageId} />
+        );
       } else {
         const errorMessage = await response.json();
         console.error("Upload failed:", errorMessage);
@@ -89,6 +91,11 @@ const UploadPictures = () => {
 
   const handleEventNumberChange = (e) => {
     setEventNumber(e.target.value);
+  };
+
+  const testearPing = async () => {
+    const response = await fetch("https://exiftool.ubice.com.ar/ping");
+    console.log(response);
   };
 
   const sendingJSX = (
@@ -148,6 +155,7 @@ const UploadPictures = () => {
             </Col>
           </Row>
         </Form>
+        <Button onClick={testearPing}>Testear ping</Button>
       </Container>
     </>
   );
