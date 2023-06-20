@@ -96,13 +96,6 @@ const UploadPictures = () => {
     setEventNumber(e.target.value);
   };
 
-  const testearPing = async () => {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_ADDRESS}/ping`
-    );
-    console.log(response);
-  };
-
   const sendingJSX = (
     <div className="d-flex flex-column align-items-center">
       <Spinner
@@ -160,7 +153,6 @@ const UploadPictures = () => {
             </Col>
           </Row>
         </Form>
-        <Button onClick={testearPing}>Testear ping</Button>
       </Container>
     </>
   );

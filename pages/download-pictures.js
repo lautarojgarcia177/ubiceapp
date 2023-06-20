@@ -26,6 +26,10 @@ export default function DownloadPictures() {
         }
       );
       if (!response.ok) {
+        const responseError = await response.json();
+        if (responseError) {
+          throw new Error(responseError.error);
+        }
         throw new Error("An error occurred while downloading the zip file");
       } else {
         setSearching(false);
