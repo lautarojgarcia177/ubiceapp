@@ -15,13 +15,16 @@ export default function DownloadPictures() {
     const uploadPackageId = id;
     setId("");
     try {
-      const response = await fetch("https://exiftool.ubice.com.ar/download", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ uploadPackageId }),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_ADDRESS}/download`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ uploadPackageId }),
+        }
+      );
       if (!response.ok) {
         throw new Error("An error occurred while downloading the zip file");
       } else {

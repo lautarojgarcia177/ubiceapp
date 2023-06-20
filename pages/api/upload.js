@@ -1,3 +1,5 @@
+// NOT USED BECAUSE IT DOES NOT WORK IN AWS AMPLIFY, INSTEAD THIS API ENDPOINT IS ON THE EC2 INSTANCE
+
 import multer from "multer";
 import multerS3 from "multer-s3";
 import { v4 as uuidv4 } from "uuid";

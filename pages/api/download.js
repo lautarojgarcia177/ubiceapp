@@ -1,3 +1,5 @@
+// NOT USED BECAUSE IT DOES NOT WORK IN AWS AMPLIFY, INSTEAD THIS API ENDPOINT IS ON THE EC2 INSTANCE
+
 import { GetObjectCommand, ListObjectsV2Command } from "@aws-sdk/client-s3";
 import { S3Client } from "@aws-sdk/client-s3";
 const archiver = require("archiver");

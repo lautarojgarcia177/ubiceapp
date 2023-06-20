@@ -63,10 +63,13 @@ const UploadPictures = () => {
 
     setSending(true);
     try {
-      const response = await fetch("https://exiftool.ubice.com.ar/upload", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_ADDRESS}/upload`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
       setSending(false);
       if (response.ok) {
         const { uploadPackageId } = await response.json();
@@ -94,7 +97,9 @@ const UploadPictures = () => {
   };
 
   const testearPing = async () => {
-    const response = await fetch("https://exiftool.ubice.com.ar/ping");
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BACKEND_ADDRESS}/ping`
+    );
     console.log(response);
   };
 
