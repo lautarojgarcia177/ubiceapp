@@ -83,6 +83,7 @@ const UploadPictures = () => {
         toast.error("Hubo un error subiendo las fotos");
       }
     } catch (err) {
+      setSending(false);
       console.error("Upload failed:", err);
       toast.error("Hubo un error subiendo las fotos");
     }
